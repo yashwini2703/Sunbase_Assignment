@@ -1,0 +1,43 @@
+<a class="nav-link" href="/customer"><button>Add Customer</button></a>
+<!-- customer-list.component.html -->
+<div class="container mt-5">
+    <h2>Customer List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Email</th>
+          <th>Phone</th>
+        
+          <th>Action</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.id }}</td>
+          <td>{{ customer.firstName }}</td>
+          <td>{{ customer.lastName }}</td>
+          <td>{{ customer.address }}</td>
+          <td>{{ customer.street }}</td>
+          <td>{{ customer.city }}</td>
+          <td>{{ customer.state }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.phone }}</td>
+
+          
+          <td>
+            
+            <button class="btn btn-danger" (click)="deleteCustomer">Delete</button>
+            <button class="btn btn-primary" (click)="update-Customer">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
